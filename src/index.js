@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 
 import App from './components/app';
 import reducers from './reducers';
+//learning middleware in this section
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -13,3 +14,4 @@ ReactDOM.render(
     <App />
   </Provider>
   , document.querySelector('.container'));
+ 
