@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div>
       	<Header />
+      	{this.props.children}
       </div>
     );
   }
@@ -30,3 +31,7 @@ export default connect(mapStateToProps)(App);
 // new state, i need to go and update any child compnents that we have 
 
 // the provider broadcasts to any chance that it has to anything wrapped by the connect (all containers)
+
+
+// need to say hey app - if you ever get passed any children, make sure you show them 
+// if our app component receives any router children, it is responsible for showing them 
