@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import UserList from './user_list.js';
 import { connect } from 'react-redux'; 
+import Header from './header.js';
 
 class App extends Component {
   render() {
     return (
       <div>
-      	<UserList />
+      	<Header />
       </div>
     );
   }
