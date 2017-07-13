@@ -1,12 +1,10 @@
-import axios from 'axios';
 import {
-	FETCH_USERS
-} from './types.js';
+	CHANGE_AUTH 
+} from './types';
 
-export function fetchUsers() {
-	const request = axios.get('https://jsonplaceholder.typicode.com/users')
+export function authenticate(isLoggedIn) {
 	return {
-		type: FETCH_USERS,
-		payload: request,
-	}
+		type: CHANGE_AUTH,
+		payload: isLoggedIn
+	};
 }

@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users';
+import authenticationReducer from './authentication.js';
 
+// sole purpose is to represent a boolean telling us whether or not the user is logged in or not
 const rootReducer = combineReducers({
-  users: usersReducer
+  authenticated: authenticationReducer
 });
 
 export default rootReducer;
