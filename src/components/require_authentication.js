@@ -28,3 +28,5 @@ in some render method, write somethings like
 <ComposedComponent  />
 
 // this is the the enhanced componenet
+
+// we use spread operator to pass the props down to teh resources component  
