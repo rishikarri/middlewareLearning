@@ -12,21 +12,21 @@ export default function(ComposedComponent) {
 	return Authentication;
 }
 
-// In some other location... not in this file...
-// We want to use this HOC 
-// How do we make use of this thing? 
+// // In some other location... not in this file...
+// // We want to use this HOC 
+// // How do we make use of this thing? 
 
-import Authentication // this is my HOC 
-import Resources //this is the component that i want to wrap 
+// import Authentication // this is my HOC 
+// import Resources //this is the component that i want to wrap 
 
-// I now have my higher order component and the component I want to wrap 
+// // I now have my higher order component and the component I want to wrap 
 
-const ComposedComponent = Authentication(Resources);
+// const ComposedComponent = Authentication(Resources);
 
-in some render method, write somethings like 
+// in some render method, write somethings like 
 
-<ComposedComponent  />
+// <ComposedComponent  />
 
-// this is the the enhanced componenet
+// // this is the the enhanced componenet
 
-// we use spread operator to pass the props down to teh resources component  
+// // we use spread operator to pass the props down to teh resources component  
