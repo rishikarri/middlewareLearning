@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export default function(ComposedComponent) {
 	// ComposedComponenet is what we want to wrap 
 
 	class Authentication extends Component {
 		render() {
-			return <ComposedComponenet {...this.props}/>
+			console.log(this.context);
+
+			return <ComposedComponent {...this.props}/>
 		}
 	}
 
-	return Authentication;
+	function mapStateToProps(state) {
+		return {
+			authenticated: state.authenticated
+		}
+	}
+	return connect(mapStateToProps)(Authentication);
+}
+
+function mapStateToProps(state) {
+	return {
+		authenticated: state.authenticated
+	}
 }
 
 // // In some other location... not in this file...
