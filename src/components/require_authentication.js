@@ -5,6 +5,10 @@ export default function(ComposedComponent) {
 	// ComposedComponenet is what we want to wrap 
 
 	class Authentication extends Component {
+
+		static contextTypes = {
+			router: React.PropTypes.object
+		}
 		render() {
 			console.log(this.context);
 
