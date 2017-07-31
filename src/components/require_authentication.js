@@ -12,8 +12,17 @@ export default function(ComposedComponent) {
 		}
 
 		componentWillMount() {
-			this.context.router.push('/');
+			if(!this.props.authenticated) {
+				this.context.router.push('/');				
+			}
 		}
+
+		componentWillUpdate(nextProps) {
+			if(!this.props.authenticated) {
+				this.context.router.push('/');
+			}
+		}
+
 		render() {
 			console.log(this.context);
 
