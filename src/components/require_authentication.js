@@ -6,8 +6,13 @@ export default function(ComposedComponent) {
 
 	class Authentication extends Component {
 
+		// Authentication.contextTypes 
 		static contextTypes = {
 			router: React.PropTypes.object
+		}
+
+		componentWillMount() {
+			this.context.router.push('/');
 		}
 		render() {
 			console.log(this.context);
@@ -15,6 +20,8 @@ export default function(ComposedComponent) {
 			return <ComposedComponent {...this.props}/>
 		}
 	}
+
+	
 
 	function mapStateToProps(state) {
 		return {
